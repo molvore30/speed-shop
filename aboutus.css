@@ -19,9 +19,6 @@ body {
    z-index: -1;
  }
  
- /* === HEADER === */
- /* ABOUT US PAGE STYLES */
-
 .main-header {
   display: flex;
   justify-content: center;
@@ -297,7 +294,6 @@ nav a:hover {
    box-shadow: 0 0 16px rgba(255, 102, 0, 0.4);
  }
  
- /* === FOOTER === */
  footer {
    background: linear-gradient(135deg, #111, #1a1a1a);
    color: #fff;
@@ -388,9 +384,6 @@ nav a:hover {
    }
  }
  
-
-
-/* === RESPONSIVE STYLES FOR ABOUT PAGE === */
 @media (max-width: 992px) {
   .about {
     flex-direction: column;
