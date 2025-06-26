@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami - Speed Shop</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <section class="jumbotron">
+      <h1 class="jumbotron-title">Hubungi Kami</h1>
+      <p class="jumbotron-text">Punya pertanyaan atau butuh informasi lebih lanjut? Kirimkan pesanmu sekarang!</p>
+    </section>
+  
+    <div class="contact-wrapper">
+      <form action="https://formsubmit.co/rhsbodo30@gmail.com" method="POST" class="contact-form">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Tulis nama lengkap Anda" required>
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+  
+        <label for="telepon">Nomor Telepon</label>
+        <input type="text" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
+  
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="6" placeholder="Tulis pesan atau pertanyaan Anda di sini..." required></textarea>
+  
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://your-website.com/thank-you.html"> <!-- Ganti dengan URL yang sesuai -->
+  
+        <input type="submit" value="Kirim Pesan">
+      </form>
+    </div>
+  </main>
+</body>
+</html>

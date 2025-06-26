@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="custom.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Produk</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+    label { font-weight: bold; margin-top: 10px; display: block; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; }
+    .checkbox-group, .radio-group { margin: 10px 0; }
+    .checkbox-group label, .radio-group label { font-weight: normal; margin-right: 10px; }
+    button { padding: 10px 20px; background: green; color: white; border: none; margin-top: 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2 id="judul-produk">Custom Produk</h2>
+  <form id="formCustom">
+   <!-- Pilihan Custom: Checkbox Gabungan -->
+<label>Pilih Custom Bahan + Baut:</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="custom" value="Carbon + Baut"> Carbon + Baut</label><br>
+  <label><input type="checkbox" name="custom" value="Carbon tanpa Baut"> Carbon tanpa Baut</label><br>
+  <label><input type="checkbox" name="custom" value="Aluminium + Baut"> Aluminium + Baut</label><br>
+  <label><input type="checkbox" name="custom" value="Aluminium tanpa Baut"> Aluminium tanpa Baut</label><br>
+  <label><input type="checkbox" name="custom" value="Normal + Baut"> Normal + Baut</label><br>
+  <label><input type="checkbox" name="custom" value="Normal tanpa Baut"> Normal tanpa Baut</label>
+</div>
+
+
+    <!-- Custom ukir nama -->
+    <label>Ukir Nama (opsional):</label>
+    <input type="text" id="ukir" placeholder="Tulis nama yang ingin diukir">
+
+    <!-- Alamat -->
+    <label>Alamat:</label>
+    <textarea id="alamat" required></textarea>
+
+    <!-- Nomor HP -->
+    <label>No. HP:</label>
+    <input type="text" id="nomor" required>
+
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="email" id="email" required>
+
+    <button type="submit">Kirim ke WhatsApp</button>
+  </form>
+
+  <script>
+    // Ambil nama produk dari URL
+    const params = new URLSearchParams(window.location.search);
+    const namaProduk = params.get('produk') || 'Produk Tanpa Nama';
+    document.getElementById('judul-produk').textContent = `Custom untuk ${namaProduk}`;
+  
+    document.getElementById('formCustom').addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const customTerpilih = [...document.querySelectorAll('input[name="custom"]:checked')]
+  .map(el => el.value).join(', ') || 'Tidak memilih opsi';
+
+  
+      const baut = document.querySelector('input[name="baut"]:checked')?.value || '-';
+      const ukir = document.getElementById('ukir').value || '-';
+      const alamat = document.getElementById('alamat').value.trim();
+      const nomor = document.getElementById('nomor').value.trim();
+      const email = document.getElementById('email').value.trim();
+  
+      // Validasi nomor HP
+      const nomorHpRegex = /^[0-9]{10,15}$/;
+      if (!nomorHpRegex.test(nomor)) {
+        alert("Nomor HP harus berupa angka dan minimal 10 digit.");
+        return;
+      }
+  
+      const noWA = '6281325144973';
+      const pesan = `Halo Admin, saya ingin memesan *${namaProduk}* dengan detail:\n` +
+     `- Custom: ${customTerpilih}\n` +
+     `- Ukir Nama: ${ukir}\n` +
+     `- Alamat: ${alamat}\n` +
+     `- Nomor HP: ${nomor}\n` +
+     `- Email: ${email}`;
+
+  
+     window.open(`https://wa.me/${noWA}?text=${encodeURIComponent(pesan)}`, '_blank');
+    });
+  </script>  
+</body>
+</html>

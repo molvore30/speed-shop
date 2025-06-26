@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background-image: url('assets/@king_kyzn.jpg'); /* Ganti dengan gambar dari index.html */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #e9e5e5;
+    backdrop-filter: brightness(0.95); /* optional: biar form-nya tetap kontras */
+  }
+  
+  
+  /* Judul */
+  h1#judul-produk {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: bold;
+  }
+  
+  /* Form Styling */
+  form {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.92); /* transparan putih */
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Label */
+  form label {
+    display: block;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #444;
+  }
+  
+  /* Input Field */
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Checkbox Group */
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f7f7f7;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .checkbox-group input[type="radio"] {
+    transform: scale(1.2);
+  }
+  
+  .checkbox-group label:hover {
+    background: #ececec;
+  }
+  
+  /* Tombol Kirim */
+  button[type="submit"] {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background 0.3s ease;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #d62839;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    form {
+      margin: 30px 20px;
+      padding: 25px;
+    }
+  
+    h1#judul-produk {
+      font-size: 1.8rem;
+    }
+  
+    .checkbox-group {
+      flex-direction: column;
+    }
+  }
+  

@@ -1,0 +1,240 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("assets/@king_kyzn.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  animation: fadeInBackground 1.2s ease-in;
+}
+.btn-order {
+  background: linear-gradient(135deg, #ff6600, #ffaa00);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 102, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  margin-top: 15px;
+}
+
+.btn-order:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+  background: linear-gradient(135deg, #ffaa00, #ff6600);
+}
+
+
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+
+.main-header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(255,165,0,0.2);
+  border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+}
+
+.header-info a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(255, 102, 0, 0.6);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6600;
+  text-shadow: 0 0 6px rgba(255, 102, 0, 0.7);
+}
+
+/* === GLOWING PRICE BOXES === */
+.tab {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  position: relative;
+}
+
+.tab:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
+}
+
+.tab h2 {
+  font-size: 2em;
+  margin-bottom: 12px;
+  color: #ff6600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.tab p {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: -10px;
+  right: -10px; bottom: -10px;
+  background: linear-gradient(45deg, rgba(255, 102, 0, 0.2), transparent);
+  z-index: -1;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab:hover::before {
+  opacity: 1;
+}
+
+/* === ANIMATIONS === */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* === RESPONSIVE STYLES FOR PRICE PAGE === */
+@media (max-width: 992px) {
+  .tab {
+    max-width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .tab h2 {
+    font-size: 1.6em;
+  }
+
+  .tab p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #ff6600;
+    border-radius: 2px;
+  }
+
+  .main-header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 102, 0, 0.3);
+  }
+
+  nav.active {
+    display: flex !important;
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .tab h2 {
+    font-size: 1.4em;
+  }
+
+  .tab p {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab h2 {
+    font-size: 1.2em;
+  }
+
+  .tab p {
+    font-size: 0.9em;
+  }
+}

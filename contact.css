@@ -1,0 +1,133 @@
+/* Style umum untuk form Hubungi Kami */
+body {
+  background-color: #111;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+}
+
+header, footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.jumbotron {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.jumbotron-title {
+  font-size: 2.5em;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.jumbotron-text {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(255, 102, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #e65c00;
+  box-shadow: 0 0 12px rgba(255, 102, 0, 0.6);
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+footer .main-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+
+footer .footer-social a {
+  color: #ff6600;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  footer .main-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
