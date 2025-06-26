@@ -17,7 +17,6 @@
 <body>
   <h2 id="judul-produk">Custom Produk</h2>
   <form id="formCustom">
-   <!-- Pilihan Custom: Checkbox Gabungan -->
 <label>Pilih Custom Bahan + Baut:</label>
 <div class="checkbox-group">
   <label><input type="checkbox" name="custom" value="Carbon + Baut"> Carbon + Baut</label><br>
@@ -29,19 +28,19 @@
 </div>
 
 
-    <!-- Custom ukir nama -->
+   
     <label>Ukir Nama (opsional):</label>
     <input type="text" id="ukir" placeholder="Tulis nama yang ingin diukir">
 
-    <!-- Alamat -->
+   
     <label>Alamat:</label>
     <textarea id="alamat" required></textarea>
 
-    <!-- Nomor HP -->
+  
     <label>No. HP:</label>
     <input type="text" id="nomor" required>
 
-    <!-- Email -->
+   
     <label>Email:</label>
     <input type="email" id="email" required>
 
@@ -49,7 +48,7 @@
   </form>
 
   <script>
-    // Ambil nama produk dari URL
+ 
     const params = new URLSearchParams(window.location.search);
     const namaProduk = params.get('produk') || 'Produk Tanpa Nama';
     document.getElementById('judul-produk').textContent = `Custom untuk ${namaProduk}`;
@@ -67,7 +66,7 @@
       const nomor = document.getElementById('nomor').value.trim();
       const email = document.getElementById('email').value.trim();
   
-      // Validasi nomor HP
+     
       const nomorHpRegex = /^[0-9]{10,15}$/;
       if (!nomorHpRegex.test(nomor)) {
         alert("Nomor HP harus berupa angka dan minimal 10 digit.");
