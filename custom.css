@@ -1,17 +1,17 @@
 body {
     font-family: 'Roboto Slab', serif;
-    background-image: url('assets/@king_kyzn.jpg'); /* Ganti dengan gambar dari index.html */
+    background-image: url('@king_kyzn.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     color: #e9e5e5;
-    backdrop-filter: brightness(0.95); /* optional: biar form-nya tetap kontras */
+    backdrop-filter: brightness(0.95); 
   }
   
   
-  /* Judul */
+ 
   h1#judul-produk {
     text-align: center;
     margin-top: 60px;
@@ -20,18 +20,18 @@ body {
     font-weight: bold;
   }
   
-  /* Form Styling */
+ 
   form {
     max-width: 700px;
     margin: 40px auto;
-    background-color: rgba(255, 255, 255, 0.92); /* transparan putih */
+    background-color: rgba(255, 255, 255, 0.92); 
     padding: 40px;
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
   
   
-  /* Label */
+ 
   form label {
     display: block;
     font-weight: bold;
@@ -39,7 +39,7 @@ body {
     color: #444;
   }
   
-  /* Input Field */
+  
   input[type="text"],
   input[type="tel"],
   input[type="email"] {
@@ -52,7 +52,7 @@ body {
     box-sizing: border-box;
   }
   
-  /* Checkbox Group */
+ 
   .checkbox-group {
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +79,7 @@ body {
     background: #ececec;
   }
   
-  /* Tombol Kirim */
+ 
   button[type="submit"] {
     background-color: #e63946;
     color: #fff;
@@ -99,7 +99,7 @@ body {
     background-color: #d62839;
   }
   
-  /* Responsive */
+ 
   @media (max-width: 768px) {
     form {
       margin: 30px 20px;
