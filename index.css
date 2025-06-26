@@ -1,9 +1,9 @@
-/* === RESET & BASE === */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("assets/@king_kyzn.jpg");
+  background-image: url("@king_kyzn.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -27,7 +27,6 @@ body::before {
   to { opacity: 1; }
 }
 
-/* === HEADER === */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -107,7 +106,6 @@ nav a:hover {
   margin-top: 10px;
 }
 
-/* === PRODUCT GRID === */
 .items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -176,7 +174,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* === MAP SECTION === */
 .map-container, #maps {
   display: flex;
   flex-direction: column;
@@ -206,7 +203,6 @@ iframe {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* === FOOTER === */
 footer {
   background: linear-gradient(135deg, #111, #1a1a1a);
   color: #fff;
@@ -275,7 +271,6 @@ footer::before {
 
 
 
-/* === RESPONSIVE === */
 @media (max-width: 1200px) {
   .items {
     grid-template-columns: repeat(3, 1fr);
@@ -284,9 +279,7 @@ footer::before {
 }
 
 @media (max-width: 992px) {
-/* RESPONSIVE LAYOUT FOR INDEX PAGE */
 
-/* Default styles */
 .main-header {
   display: flex;
   justify-content: space-between;
